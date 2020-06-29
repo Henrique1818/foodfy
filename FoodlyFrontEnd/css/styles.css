@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.home-page {
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+.home-page nav {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 0.9fr 1.5fr;
+}
+
+.navbar-links ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links ul li {
+    margin-right: 28px;
+}
+
+.navbar-links ul li:last-child {
+    margin-right: 0;
+} 
+
+.navbar-links ul li a {
+    font-size: 18px;
+    line-height: 28px;
+    color: #333;
+    position: relative;
+}
+
+.navbar-links ul li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #444;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4px;
+}
+
+.navbar-links ul li a:hover {
+    color: #444;
+    font-weight: bold;
+}
+
+.navbar-links ul li a:hover::after {
+    content: "";
+    width: 100%;
+    transition: width 300ms ease-in;
+}
+
+.background-home-page {
+    display: flex;
+    background-color: #FBDFDB;
+    border-radius: 28px;
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+
+.background-home-page .content-text {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    min-width: 330px;
+}
+
+.background-home-page .content-text h2 {
+    font-size: 32px;
+    line-height: 42px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.background-home-page .content-text p {
+    color: #333;
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 350px;
+}
+
+.background-home-page .image-chef img {
+    position: absolute;
+    top: 14%;
+    right: 10%;
+}
+
+.content-recipes {
+    margin-top: 32px;
+}
+
+/* ==== card ==== */
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.cards {
+    cursor: pointer;
+}
+
+.cards .image-card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+}
+
+.cards .content-card h3 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.cards .content-card p {
+    font-size: 14px;
+    font-weight: normal;
+    color: #777;
+}
+
+footer {
+    margin-top: 42px;
+    text-align: center;
+    background-color: #eee;
+    padding: 20px;
+}
+
+.container-footer h2 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #333;
+}
