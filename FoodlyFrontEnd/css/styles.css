@@ -24,6 +24,17 @@ ul, li {
 main {
     max-width: 900px;
     margin: 0 auto;
+    animation: aside 1s ease-in-out .2s;
+}
+
+@keyframes aside {
+    0% {
+        transform: translateX(-50px);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .home-page {
@@ -116,11 +127,13 @@ main {
     right: 10%;
 }
 
-.content-recipes {
-    margin-top: 32px;
-}
-
 /* ==== card ==== */
+.content-recipes {
+    padding: 32px 0;
+}
+.title-one {
+    margin-bottom: 32px;
+}
 
 .card {
     display: grid;
@@ -131,6 +144,13 @@ main {
 
 .cards {
     cursor: pointer;
+}
+
+.cards:hover {
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 3px 3px 18px -4px rgba(0, 0, 0, 0.3);
+    transition: padding 200ms ease-in-out;
 }
 
 .cards .image-card img {
@@ -154,11 +174,125 @@ main {
     color: #777;
 }
 
+/* modal */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal {
+    margin: 20vh auto;
+    width: 660px;
+    height: 420px;
+    background-color: #fff;
+    border-radius: 16px;
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-modal {
+    position: absolute;
+    bottom: 25px;
+
+    font-size: 18px;
+    line-height: 19px;
+    color: #555;
+    cursor: pointer;
+}
+
+/* active */
+
+.modal-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    position: relative;
+}
+
+.content-modal {
+    text-align: center;
+}
+
+.content-modal img {
+    width: 80%;
+    border-radius: 12px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-modal .content-modal-info {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-modal .content-modal-info .title {
+    color: #333;
+    font-size: 18px;
+    line-height: 19px;
+    margin-bottom: 5px;
+}
+
+.content-modal .content-modal-info .author {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* about */
+
+.about-page {
+    padding: 32px 0;
+}
+
+.content-about {
+    margin-bottom: 18px;
+}
+
+.content-about:last-child {
+    margin-bottom: 0;
+}
+
+.content-about .title-about {
+    font-size: 24px;
+    line-height: 34px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.content-about .description p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #444;
+    font-weight: normal;
+}
+
+.content-about .description p:first-child {
+    margin-bottom: 18px;
+}
+
+
+
 footer {
     margin-top: 42px;
     text-align: center;
     background-color: #eee;
     padding: 20px;
+    width: 100%;
 }
 
 .container-footer h2 {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./assets/chef.png">
     <title>Foodly</title>
 </head>
 <body>
@@ -45,7 +46,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="cards">
+                    <div class="cards" id="burger">
                         <div class="image-card">
                             <img src="./assets/burger.png" alt="burger">
                         </div>
@@ -55,7 +56,7 @@
                         </div>
                     </div>
 
-                    <div class="cards">
+                    <div class="cards" id="pizza">
                         <div class="image-card">
                             <img src="./assets/pizza.png" alt="pizza">
                         </div>
@@ -65,7 +66,7 @@
                         </div>
                     </div>
 
-                    <div class="cards">
+                    <div class="cards" id="espaguete">
                         <div class="image-card">
                             <img src="./assets/espaguete.png" alt="espaguete">
                         </div>
@@ -75,7 +76,7 @@
                         </div>
                     </div>
 
-                    <div class="cards">
+                    <div class="cards" id="lasanha">
                         <div class="image-card">
                             <img src="./assets/lasanha.png" alt="lasanha">
                         </div>
@@ -85,7 +86,7 @@
                         </div>
                     </div>
 
-                    <div class="cards">
+                    <div class="cards" id="doce">
                         <div class="image-card">
                             <img src="./assets/doce.png" alt="doce">
                         </div>
@@ -95,7 +96,7 @@
                         </div>
                     </div>
 
-                    <div class="cards">
+                    <div class="cards" id="asinhas">
                         <div class="image-card">
                             <img src="./assets/asinhas.png" alt="asinhas">
                         </div>
@@ -109,11 +110,29 @@
         </article>
     </main>
 
+    <!-- modal -->
+    
+    <section class="modal-overlay">
+        <div class="modal">
+            <div class="content-modal">
+                <img src="">
+
+                <div class="content-modal-info">
+                    <div class="title"></div>
+                
+                    <div class="author"></div>
+                </div>
+            </div>
+            <a class="close-modal">Fechar modal</a>
+        </div>
+    </section>
+
     <footer>
         <div class="container-footer">
-            <h2>Todos direitos reservados, receitas Foodfy.</h2>
+            <h2>&copy; Todos direitos reservados, receitas Foodfy.</h2>
         </div>
     </footer>
     
+    <script src="./js/scripts.js"></script>
 </body>
 </html>
