@@ -1,0 +1,418 @@
+/* === Global === */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a, li, ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* === Header === */
+
+header {
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+header nav {
+    padding: 32px 0;
+    margin: 0 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.nav-image-logo img {
+    width: 36%;
+}
+
+.nav-links a{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: normal;
+    color: #333;
+    align-items: center;
+    transition: color 200ms;
+}
+
+.nav-links a + a {
+    margin: 0 12px;
+}
+
+.nav-links a:hover {
+    color: #777;
+    filter: brightness(90%);
+}
+
+/* === WRAPPER === */
+
+.wrapper {
+    background-color: #FBDFDB;
+    border-radius: 30px;
+    padding: 32px 32px 0;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.wrapper-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.wrapper-content {
+    max-width: 300px;
+    padding: 32px;
+    margin-top: 25px;
+}
+
+.wrapper-content h1 {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.wrapper-content p {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: normal;
+    color: #333;
+}
+
+.wrapper-image {
+    text-align: center;
+}
+
+/* === Cards === */
+
+.cards-section {
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.cards-title {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+}
+
+.cards {
+    margin: 18px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.card-image-container img {
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.card-content {
+    margin: 12px 0;
+}
+
+.card-content h1 {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    padding: 5px 0;
+}
+.card-content p {
+    color: #999;
+    font-size: 15px;
+    filter: brightness(90%);
+}
+
+/* === Footer === */
+
+footer {
+    background-color: #eee;
+    padding: 12px;
+}
+
+.footer-content {
+    text-align: center;
+    margin: 8px;
+}
+
+.footer-content h2 {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #999;
+}
+
+/* === Modal === */
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background: #fff;
+    max-width: 600px;
+    width: 100%;
+    height: 400px;
+    margin: 20vh auto;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+}
+
+.modal .close-modal {
+    font-size: 20px;
+    line-height: 29px;
+    color: #999;
+    position: absolute;
+    left: 40%;
+    bottom: 40px;
+    cursor: pointer;
+}
+
+/* modal active */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-info .title {
+    color: #333;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: bold;
+}
+
+.modal-info .author {
+    color: #777;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: normal;
+}
+
+.modal-content img {
+    margin: 20px;
+    width: 550px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+/* === About === */
+
+.about-container {
+    max-width: 900px;
+    margin: 22px auto 52px auto;
+}
+
+.about-content {
+    margin-bottom: 12px;
+}
+
+.about-title {
+    color: #333;
+    font-size: 32px;
+    line-height: 42px;
+    padding: 12px 0;
+}
+
+.about-subtitle .title {
+    color: #444;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+
+.about-subtitle .subtitle {
+    color: #444;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* === recipe page === */
+
+.recipe {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.recipe-image-container {
+    max-width: 900px;
+}
+
+.recipe-image-container img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.recipe-content {
+    text-align: center;
+    padding: 20px 32px;
+}
+
+.recipe-content h1 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #333;
+}
+
+.recipe-content p {
+    font-size: 20px;
+    line-height: 30px;
+    color: #777;
+}
+
+.recipe-info {
+    margin: 15px 0 42px;
+}
+
+.recipe-ingredients {
+    margin-bottom: 12px;
+}
+
+.recipe-ingredients h1, .span {
+    display: inline-block;
+}
+
+.recipe-ingredients h1 {
+    color: #333;
+    font-size: 24px;
+    line-height: 38px;
+    margin-right: 20px;
+}
+
+.span {
+    color: #999;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    align-content: center;
+}
+
+.topic-content {
+    margin: 12px 15px;
+}
+
+.topic-content ul {
+    margin-bottom: 32px;
+}
+
+.topic-content ul li {
+    color: #444;
+    font-size: 18px;
+    line-height: 28px;
+    list-style-type: disc;
+}
+
+.recipe-preparation {
+    margin-bottom: 12px;
+}
+
+.recipe-preparation h1, .span {
+    display: inline-block;
+}
+
+.recipe-preparation h1 {
+    color: #333;
+    font-size: 24px;
+    line-height: 38px;
+    margin-right: 20px;
+}
+
+.span {
+    color: #999;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    align-content: center;
+}
+
+.span {
+    cursor: pointer;
+}
+
+.topic-content {
+    margin: 12px 15px;
+}
+
+.topic-content ul {
+    margin-bottom: 32px;
+}
+
+.topic-content ul li {
+    color: #444;
+    font-size: 18px;
+    line-height: 28px;
+    list-style-type: disc;
+}
+
+.recipe-information h1, .span {
+    display: inline-block;
+}
+
+.recipe-information h1 {
+    color: #333;
+    font-size: 24px;
+    line-height: 38px;
+    margin-right: 20px;
+}
+
+.span {
+    color: #999;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    align-content: center;
+}
+
+.topic-content {
+    margin: 12px 15px;
+}
+
+.topic-content p {
+    color: #444;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

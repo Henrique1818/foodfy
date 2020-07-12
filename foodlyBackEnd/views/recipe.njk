@@ -1,0 +1,57 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <section class="recipes">
+        <div class="recipe" id="{{item.id}}">
+            <div class="recipe-image-container">
+                <img src="{{item.image}}" alt="">
+            </div>
+
+            <div class="recipe-content">
+                <h1>{{item.title}}</h1>
+                <p>by {{item.author}}</p>
+            </div>
+
+            <div class="recipe-info">
+                <div class="recipe-ingredients">
+                    <h1>Ingredients</h1>
+                    <span class="span">Hide</span>
+
+                    <div class="topic-content show">
+                        <ul>
+                            {% for ingredient in item.ingredients %}
+                                <li>{{ingredient}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="recipe-preparation">
+                    <h1>Method of Preparation</h1>
+                    <span class="span">Show</span>
+
+                    <div class="topic-content hide">
+                        <ul>
+                            {% for preparation in item.preparation %}
+                                <li>{{preparation}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="recipe-information">
+                    <h1>Additional Information</h1>
+                    <span class="span">Hide</span>
+
+                    <div class="topic-content show">
+                        <p>{{item.information}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/scripts.js"></script>
+{% endblock %}

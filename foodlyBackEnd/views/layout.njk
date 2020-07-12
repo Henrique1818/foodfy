@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/chef.png">
+    <title>Foodly</title>
+
+    {% block head %}
+
+    {% endblock %}
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-image-logo">
+                <a href="/">
+                    <img src="/logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <a href="/about">About</a>
+                <a href="/recipes">Recipes</a>
+            </div>
+        </nav>
+    </header>
+    
+    {% block content %} {% endblock %}
+
+    <footer>
+        <div class="footer-content">
+            <h2>&copy; All rights reserved, Foodfy recipes.</h2>
+        </div>
+    </footer>
+</body>
+</html>

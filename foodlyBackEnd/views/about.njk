@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="about-container">
+            <div class="about-content">
+                <h1 class="about-title">{{about.title[0]}}</h1>
+                <div class="about-subtitle">
+                    <p class="title">{{about.description}}</p>
+                    <p class="subtitle">{{about.descriptionSobre}}</p>
+                </div>
+
+                <h1 class="about-title">{{about.title[1]}}</h1>
+                <div class="about-subtitle">
+                    <p class="title">{{about.description}}</p>
+                    <p class="subtitle">{{about.descriptionSobre}}</p>
+                </div>
+
+                <h1 class="about-title">{{about.title[2]}}</h1>
+                <div class="about-subtitle">
+                    <p class="subtitle">{{about.descriptionReceitas}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
